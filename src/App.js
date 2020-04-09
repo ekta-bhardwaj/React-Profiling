@@ -1,26 +1,26 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState, useCallback } from "react";
+import "./App.css";
+import { Button1 } from "./Button1";
+import { Button2 } from "./Button2";
+const App = () => {
+  const [count, setCount] = useState(0);
+  const [count2, setCount2] = useState(0);
 
-function App() {
+  const increment = useCallback(() => {
+    setCount((c) => c + 1);
+  }, [setCount]);
+  const increment2 = useCallback(() => {
+    setCount2((c) => c + 1);
+  }, [setCount2]);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Button1 increment={increment} />
+      <div>count: {count}</div>
+      <Button2 increment2={increment2}></Button2>
+      <div>count: {count2}</div>
     </div>
   );
-}
+};
 
 export default App;
