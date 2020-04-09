@@ -1,68 +1,20 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# React Profiler
+React 16.5 adds support for a new DevTools profiler plugin.The concept of the react profiler is to collect timing information about components, the time rendered and committed in order to identify when each component actually rendered and at what speed. Basically to explain to you how fast or how slow your application is.
 
-## Available Scripts
+# Note👀:
+react-dom 16.5+ supports profiling in DEV mode. A production profiling bundle is also available as react-dom/profiling. Read more about how to use this bundle at fb.me/react-profiling
 
-In the project directory, you can run:
+# Explain Profiling in React Application
+DevTools will show a “Profiler” tab for applications that support the new profiling API. 
+Run the project, The “Profiler” panel will be empty initially. 
+Click the record button to start profiling. Once you’ve started recording, DevTools will automatically collect performance information each time your application renders. Use your app as you normally would. 
+Click on Button 1 and to finished profiling, click the “Stop” button. 
+You can see App, Button1 and Button2 all three component are rendered while we just clicked on Button1. so this will decrease the application performance. For better performance we'll use useCallback() and React.memo(). Add  React.memo() in Button1 and Button2 component. It will help us control when our components rerender.
+ex: export const Button1 = React.memo(({ increment }) => {
+  UseCountRender();
+  return <button onClick={increment}>Button 1</button>;
+});
 
-### `npm start`
+Now again check profiling , you'll notice that no extra component will be re-rendered, so you can use anything to increase your application performance with the use of reacting profiling.
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+# For better understanding, read this blog: https://scotch.io/tutorials/use-the-react-profiler-for-performance
