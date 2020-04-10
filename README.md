@@ -13,6 +13,7 @@
     Click the record button to start profiling. Once you’ve started recording, DevTools will automatically 
     collect performance information each time your application renders. Use your app as you normally would. 
     Click on Button 1 and to finished profiling, click the “Stop” button. 
+    
     You can see App, Button1 and Button2 all three component are rendered while we just clicked on Button1. 
     so this will decrease the application performance. For better performance we'll use useCallback() 
     and React.memo(). Add  React.memo() in Button1 and Button2 component. It will help us control when 
