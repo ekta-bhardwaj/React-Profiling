@@ -28,3 +28,4 @@
 
 ### For better understanding, read this blog: 
     https://scotch.io/tutorials/use-the-react-profiler-for-performance
+    https://reactjs.org/blog/2018/09/10/introducing-the-react-profiler.html
