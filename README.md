@@ -1,5 +1,5 @@
 # React Profiler
-    React 16.5 adds support for a new DevTools profiler plugin.The concept of the react profiler is to collect timing 
+    React 16.5 adds support for a new DevTools profiler plugin. The concept of the react profiler is to collect timing 
     information about components, the time rendered and committed in order to identify when each component actually 
     rendered and at what speed. Basically to explain to you how fast or how slow your application is.
 
@@ -23,7 +23,7 @@
       return <button onClick={increment}>Button 1</button>;
     });
 
-    Now again check profiling , you'll notice that no extra component will be re-rendered, so you can use 
+    Now again check profiling, you'll notice that no extra component will be re-rendered, so you can use 
     anything to increase your application performance with the use of reacting profiling.
 
 ### For better understanding, read this blog: 
