@@ -4,7 +4,7 @@
     rendered and at what speed. Basically to explain to you how fast or how slow your application is.
 
 ## Note👀:
-    React-dom 16.5+ supports profiling in DEV mode. A production profiling bundle is also available as react-dom/profiling. 
+    React-dom 16.5+ supports profiling in DEV mode. A production profiling bundle is also available as react-dom/profiling.
     Read more about how to use this bundle at fb.me/react-profiling
 
 ## Explain Profiling in React Application
